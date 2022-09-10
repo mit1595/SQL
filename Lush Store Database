@@ -1,0 +1,36 @@
+Create Table Lush (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+Product Text,
+Quantity Numeric,
+Price_in_dollars Numeric,
+Rating Numeric,
+Percentage_sold INTEGER
+);
+
+Insert into Lush VALUES (1, "Vitamin-C Serum", 20, 12, 4.2, 87);
+Insert into Lush VALUES (2, "Facial cleanser", 17, 8, 4.7, 80);
+Insert into Lush VALUES (3, "Lotion", 30, 5, 3.9, 40);
+Insert into Lush VALUES (4, "clay mask", 24, 15, 4.7, 85);
+Insert into Lush VALUES (5, "foundation", 44, 7, 4, 34);
+Insert into Lush VALUES (6, "lip stick", 70, 4, 3.8, 15); 
+Insert into Lush VALUES (7, "eyeliner", 47, 6, 4.2, 78); 
+Insert into Lush VALUES (8, "body wash", 85, 4, 3, 12);
+Insert into Lush VALUES (9, "shampoo", 65, 5, 4.5, 90);
+Insert into Lush VALUES (10, "nail polish", 55, 4, 5, 95);
+Insert into Lush VALUES (11, "loofah", 40, 3, 4, 25);
+Insert into Lush VALUES (12, "conditioner", 45, 10, 4.5, 85);
+Insert into Lush VALUES (13, "toner", 55, 15, 4, 70);
+Insert into Lush VALUES (14, "mascara", 70, 7, 3, 40);
+Insert into Lush VALUES (15, "bar soap", 90, 5, 3.5, 35); 
+
+--Display the database ordered by price
+Select * from Lush
+Order by Price_in_dollars;
+
+--What is the highest rated item from lush?
+Select rating, product From Lush
+Order by rating DESC; 
+
+--What is the best selling/highest selling product from lush?
+Select product, percentage_sold From Lush
+Order by percentage_sold DESC; 
